@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package schemaVersion="1.2" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+  <vendor>ArteryTek</vendor>
+  <url></url>
+  <name>AT32L021_DFP</name>
+  <description>ArteryTek AT32L0 Series Device Support,Drivers</description>
+  <releases>
+    <release version="2.0.8" date="2026-08-28" url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/ArteryTek.AT32L021_DFP.2.0.8.pack">
+      change URL.
+    </release>
+  </releases>
+  <keywords>
+    <!-- keywords for indexing -->
+    <keyword>ArteryTek</keyword>
+    <keyword>AT32L021</keyword>
+    <keyword>AT32L0</keyword>
+  </keywords>
+
+  <devices>
+    <!-- ******************************  Cortex-M4  ********************** -->
+    <family Dfamily="AT32L02x Series" Dvendor="ArteryTek:143">
+      <!--book name="Device/ARM/Documents/??_dgug.pdf"       title="?? Device Generic Users Guide"/-->
+    <processor Dcore="Cortex-M0+" DcoreVersion="r0p1" Dfpu="0" Dmpu="1" Dtz="NO_TZ" Dendian="Little-endian" />
+    <compile header="Device/Include/at32l021.h"/>
+
+      <description>
+AT32L0 is a new 32-bit high performance, low power consumption universal microcontroller family powered by the ARM Cortex-M0+ RISC core,which targeted at various MCU application areas.
+AT32L0 family integrates features to simplify system design and provide customers wide range of comprehensive and superior cost effective MCU portfolios with proven technology and great innovation.
+      </description>    
+
+      <!-- ************************  Subfamily 'AT32L021'  **************************** -->
+      <subFamily DsubFamily="AT32L021">
+      <processor Dclock="80000000"/>
+      <debug svd="SVD/AT32L021xx_v2.svd"/>
+      <description>
+AT32L021 - ARM Cortex-M0+ Core
+  Frequency up to 80 MHz
+  NVIC support 16 internal, 31 external interrupts, each has 4 priority levels
+
+Memories
+  Flash size from 16KB up to 64KB
+  SRAM size up to 9KB
+
+Low power management
+  Power saving mode: sleep, deep-sleep and standby mode
+  Independent battery supply for real-calendar RTC and battry powered domain register
+
+Advanced analog peripherals
+  1 x 12bit ADC
+
+Integrated peripherals interface
+  Up to 4 x USART/UART/Irda/LIN/ISO7816
+  Up to 2 x SPI
+  Up to 2 x I2C
+
+On-chip resources
+  1 x 16 bit Advanced Timer, 1 x SysTick Timer, 5 x 16 bit GPTM, 2 x WDT, 1 x RTC
+  5-chs DMA support: Timers, ADC, SPIs, I2Cs, USARTs
+  System supervisor and reset: POR,PDR,LVD
+  80% GPIO available
+  32-bit CRC, 96-bit unique ID
+  On-chip clock: HICK (8MHz), LICK (40KHz)
+      </description>
+
+      <feature type="WDT"           n="2"/>
+      <feature type="RTC"           n="32768"/>
+      <feature type="ADC"           n="1"       m="12"/>
+      <feature type="Temp"          n="-40"     m="105"/>
+      <feature type="VCC"           n="1.71"    m="3.60"/>
+
+        <!-- *************************  Device 'AT32L021C8T7'  ***************************** -->
+        <device Dname="AT32L021C8T7">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021C8T7"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x10000"     startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_64.FLM"                     start="0x08000000" size="0x10000"   default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021C6T7'  ***************************** -->
+        <device Dname="AT32L021C6T7">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021C6T7"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x8000"      startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_32.FLM"                     start="0x08000000" size="0x8000"    default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021C4T7'  ***************************** -->
+        <device Dname="AT32L021C4T7">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021C4T7"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x4000"      startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_16.FLM"                     start="0x08000000" size="0x4000"    default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021K8T7'  ***************************** -->
+        <device Dname="AT32L021K8T7">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021K8T7"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x10000"     startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_64.FLM"                     start="0x08000000" size="0x10000"   default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021K6T7'  ***************************** -->
+        <device Dname="AT32L021K6T7">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021K6T7"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x8000"      startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_32.FLM"                     start="0x08000000" size="0x8000"    default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021K4T7'  ***************************** -->
+        <device Dname="AT32L021K4T7">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021K4T7"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x4000"      startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_16.FLM"                     start="0x08000000" size="0x4000"    default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021K8U7'  ***************************** -->
+        <device Dname="AT32L021K8U7">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021K8U7"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x10000"     startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_64.FLM"                     start="0x08000000" size="0x10000"   default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021K6U7'  ***************************** -->
+        <device Dname="AT32L021K6U7">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021K6U7"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x8000"      startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_32.FLM"                     start="0x08000000" size="0x8000"    default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021K4U7'  ***************************** -->
+        <device Dname="AT32L021K4U7">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021K4U7"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x4000"      startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_16.FLM"                     start="0x08000000" size="0x4000"    default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021K8U7-4'  ***************************** -->
+        <device Dname="AT32L021K8U7-4">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021K8U7_4"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x10000"     startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_64.FLM"                     start="0x08000000" size="0x10000"   default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021K6U7-4'  ***************************** -->
+        <device Dname="AT32L021K6U7-4">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021K6U7_4"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x8000"      startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_32.FLM"                     start="0x08000000" size="0x8000"    default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021K4U7-4'  ***************************** -->
+        <device Dname="AT32L021K4U7-4">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021K4U7_4"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x4000"      startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_16.FLM"                     start="0x08000000" size="0x4000"    default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021F8U7'  ***************************** -->
+        <device Dname="AT32L021F8U7">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021F8U7"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x10000"     startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_64.FLM"                     start="0x08000000" size="0x10000"   default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021F6U7'  ***************************** -->
+        <device Dname="AT32L021F6U7">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021F6U7"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x8000"      startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_32.FLM"                     start="0x08000000" size="0x8000"    default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021F4U7'  ***************************** -->
+        <device Dname="AT32L021F4U7">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021F4U7"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x4000"      startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_16.FLM"                     start="0x08000000" size="0x4000"    default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021F8P7'  ***************************** -->
+        <device Dname="AT32L021F8P7">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021F8P7"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x10000"     startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_64.FLM"                     start="0x08000000" size="0x10000"   default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021F6P7'  ***************************** -->
+        <device Dname="AT32L021F6P7">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021F6P7"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x8000"      startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_32.FLM"                     start="0x08000000" size="0x8000"    default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021F4P7'  ***************************** -->
+        <device Dname="AT32L021F4P7">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021F4P7"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x4000"      startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_16.FLM"                     start="0x08000000" size="0x4000"    default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021G8U7'  ***************************** -->
+        <device Dname="AT32L021G8U7">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021G8U7"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x10000"     startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_64.FLM"                     start="0x08000000" size="0x10000"   default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021G6U7'  ***************************** -->
+        <device Dname="AT32L021G6U7">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021G6U7"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x8000"      startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_32.FLM"                     start="0x08000000" size="0x8000"    default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+        <!-- *************************  Device 'AT32L021G4U7'  ***************************** -->
+        <device Dname="AT32L021G4U7">
+          <compile header="Device/Include/at32l021.h"  define="AT32L021G4U7"/>
+          <memory id="IROM1"  access="rx"       start="0x08000000"  size="0x4000"      startup="1"   default="1"/>
+          <memory id="IRAM1"  access="rwx"      start="0x20000000"  size="0x2400"      init   ="0"   default="1"/>
+          <algorithm name="Flash/AT32L021_16.FLM"                     start="0x08000000" size="0x4000"    default="1"/>
+          <algorithm name="Flash/AT32L021_BOOTMEM_AP.FLM"             start="0x1FFFE400" size="0x01000"   default="0"/>
+          <algorithm name="Flash/AT32L021_USD.FLM"                    start="0x1FFFF800" size="0x00040"   default="0"/>
+        </device>
+
+     </subFamily>
+    </family>
+  </devices>
+
+  <conditions>
+    <!-- Compiler Conditions -->
+    <condition id="Compiler ARMCC">
+      <require Tcompiler="ARMCC"/>
+    </condition>
+
+    <!-- Device Conditions -->
+    <condition id="AT32L021xx">
+      <description>ArteryTek AT32L021 Devices</description>
+      <require Dvendor="ArteryTek:143" Dname="AT32L021*"/>
+      <require Cclass="Device" Cgroup="Startup" />
+    </condition>
+
+    <condition id="AT32L021">
+      <description>ArteryTek AT32L021 Devices</description>
+      <accept condition="AT32L021xx"/>
+    </condition>
+
+    <condition id="AT32L021xx ARMCC">
+      <description>ArteryTek AT32L021xx Series devices</description>
+      <require Dvendor="ArteryTek:143" Dname="AT32L021*"/>
+      <require condition="Compiler ARMCC"/>
+    </condition>
+
+    <!-- Device + CMSIS Conditions -->
+    <condition id="AT32L021 CMSIS">
+      <description>ArteryTek AT32L021 Devices and CMSIS-CORE</description>
+      <require condition="AT32L021"/>
+      <require Cclass="CMSIS" Cgroup="CORE"/>
+      <require Cclass="Device" Cgroup="at32l021_conf"/>    
+      <require Cclass="Device" Cgroup="at32l021_firmware_library" Csub="crm"/>           
+    </condition>
+
+    <!-- AT32L021 STDPERIPHERALS CRM Conditions -->
+    <condition id="AT32L021 STDPERIPHERALS CRM">
+      <description>ArteryTek AT32L021 Standard Peripherals Drivers with CRM</description>
+      <require condition="AT32L021 CMSIS"/>
+      <require Cclass="Device" Cgroup="at32l021_firmware_library" Csub="crm"/>
+    </condition>
+
+     <!-- AT32L021 STDPERIPHERALS MISC Conditions -->
+    <condition id="AT32L021 STDPERIPHERALS MISC">
+      <description>ArteryTek  AT32L021 Standard Peripherals Drivers with MISC</description>
+      <require condition="AT32L021 CMSIS"/>
+      <require Cclass="Device" Cgroup="at32l021_firmware_library" Csub="misc"/>
+    </condition>
+
+     <!-- AT32L021 STDPERIPHERALS EVAL Conditions -->
+    <condition id="AT32L021 STDPERIPHERALS EVB">
+      <description>ArteryTek AT32L021 Standard Peripherals Drivers with EVB</description>
+      <require condition="AT32L021 CMSIS"/>
+      <require Cclass="Device" Cgroup="at32l021_firmware_library" Csub="gpio"/>
+      <require Cclass="Device" Cgroup="at32l021_firmware_library" Csub="exint"/>
+      <require Cclass="Device" Cgroup="at32l021_firmware_library" Csub="usart"/>
+      <require Cclass="Device" Cgroup="at32l021_firmware_library" Csub="syscfg"/>
+    </condition>
+  </conditions>
+
+  <components>
+  <!-- at32l021_firmware_library -->
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="adc" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS CRM">
+      <description>Analog-to-digital converter (ADC) driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_ADC
+        </RTE_Components_h>
+        <files>
+          <!-- ADC file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_adc.h"/>
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_adc.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="can" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS CRM">
+      <description>CAN (CAN) driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_CAN
+        </RTE_Components_h>
+        <files>
+          <!-- CAN file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_can.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_can.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="crc" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS CRM">
+      <description>Cyclic Redundancy Check (CRC) driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_CRC
+        </RTE_Components_h>
+        <files>
+          <!-- CRC file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_crc.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_crc.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="crm" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS MISC">
+      <description>Clock and Reset Management (CRM) driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_CRM
+        </RTE_Components_h>
+        <files>
+          <!-- CRM file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_crm.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_crm.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="debug" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS CRM">
+      <description>Debug (DEBUG) driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_DEBUG
+        </RTE_Components_h>
+        <files>
+          <!-- DEBUG file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_debug.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_debug.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="dma" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS CRM">
+      <description>Direct Memory Access (DMA) driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_DMA
+        </RTE_Components_h>
+        <files>
+          <!-- DMA file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_dma.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_dma.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="ertc" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS CRM">
+      <description>Enhance Real-time Clock (ERTC) driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_ERTC
+        </RTE_Components_h>
+        <files>
+          <!-- ERTC file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_ertc.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_ertc.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="exint" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS CRM">
+      <description>External Interrupt/Event (EXINT) driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_EXINT
+        </RTE_Components_h>
+        <files>
+          <!-- EXINT file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_exint.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_exint.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="flash" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS CRM">
+      <description>Flash Memory Controller (FLASH) driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_FLASH
+        </RTE_Components_h>
+        <files>
+          <!-- FLASH file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_flash.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_flash.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="gpio" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS CRM">
+      <description>General-purpose and Alternate-function I/Os (GPIO) driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_GPIO
+        </RTE_Components_h>
+        <files>
+          <!-- GPIO file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_gpio.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_gpio.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="hwdiv" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS CRM">
+      <description>Hardware divider driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_HWDIV
+        </RTE_Components_h>
+        <files>
+          <!-- HWDIV file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_hwdiv.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_hwdiv.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="i2c" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS CRM">
+      <description>Inter-integrated CiCRMit (I2C) driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_I2C
+        </RTE_Components_h>
+        <files>
+          <!-- I2C file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_i2c.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_i2c.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="misc" Cversion="2.0.0" condition="AT32L021 CMSIS">
+      <description>MISC driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_MISC
+        </RTE_Components_h>
+        <files>
+          <!-- MISC file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_misc.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_misc.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="pwc" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS CRM">
+      <description>Power Control Unit(PWC) driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_PWC
+        </RTE_Components_h>
+        <files>
+          <!-- PWC file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_pwc.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_pwc.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="scfg" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS CRM">
+      <description>System config driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_SCFG
+        </RTE_Components_h>
+        <files>
+          <!-- SPI file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_scfg.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_scfg.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="spi" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS CRM">
+      <description>Serial Peripheral Interface / Inter-IC Sound (SPI) driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_SPI
+        </RTE_Components_h>
+        <files>
+          <!-- SPI file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_spi.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_spi.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="tmr" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS CRM">
+      <description>TMR driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_TMR
+        </RTE_Components_h>
+        <files>
+          <!-- TIMER file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_tmr.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_tmr.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="usart" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS CRM">
+      <description>Universal Synchronous Asynchronous Receiver Transmitter (USART) driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_USART
+        </RTE_Components_h>
+        <files>
+          <!-- USART file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_usart.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_usart.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="wdt" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS CRM">
+      <description>Watchdog timer(WDT) driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_WDT
+        </RTE_Components_h>
+        <files>
+          <!-- WDT file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_wdt.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_wdt.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <component Cclass="Device" Cgroup="at32l021_firmware_library" Csub="wwdt" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS CRM">
+      <description>Window Watchdog Timer (WWDT) driver for AT32L021 Devices</description>
+        <RTE_Components_h>
+        #define RTE_DEVICE_STDPERIPHERALS_WWDT
+        </RTE_Components_h>
+        <files>
+          <!-- WWDT file -->
+          <file category="header" name="Device/Firmware/Peripherals/inc/at32l021_wwdt.h" />
+          <file category="source" name="Device/Firmware/Peripherals/src/at32l021_wwdt.c" attr="config" version="2.0.0" />
+        </files>
+    </component>
+
+    <!-- Utilities AT32L021 -->
+    <component Cclass="Device" Cgroup="evb" Csub="at-start-l021" Cversion="2.0.0" condition="AT32L021 STDPERIPHERALS EVB">
+      <description>Firmware functions to manage Leds, Keys</description>
+      <files>
+        <!-- include folder -->
+        <file category="header" name="Device/Utilities/at32l021_board.h" />
+        <!-- evb file -->
+        <file category="source" name="Device/Utilities/at32l021_board.c" attr="config" version="2.0.0"/>
+      </files>
+    </component>
+
+    <!-- Config AT32L021 -->
+    <component Cclass="Device" Cgroup="at32l021_conf" Cversion="2.0.0" condition="AT32L021 CMSIS">
+      <description>Configuration file</description>
+      <files>
+        <!-- include folder -->
+        <file category="header" name="Device/Include/at32l021_conf.h" attr="config" version="2.0.0"/>
+      </files>
+    </component>
+
+   <!-- Startup AT32L021  -->
+    <component Cclass="Device" Cgroup="Startup"   Cversion="2.0.0" condition="AT32L021">
+      <description>System startup for ArteryTek AT32L021  Devices</description>
+      <files>
+        <!-- include folder -->
+        <file category="include" name="Device/Include/"/>
+        <file category="header" name="Device/Include/at32l021.h"/>
+        <!-- startup file -->
+        <file category="source" name="Device/Source/ARM/startup_at32l021.s" attr="config" version="2.0.0" condition="AT32L021xx ARMCC"/>
+        <!-- system file -->
+        <file category="source" name="Device/Source/system_at32l021.c"    attr="config" version="2.0.0"/>
+      </files>
+    </component>
+  </components>
+</package>

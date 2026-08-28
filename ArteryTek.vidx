@@ -1,0 +1,8 @@
+<index schemaVersion="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PackIndex.xsd">
+  <vendor>ArteryTek</vendor>
+  <url>https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/</url>
+  <timestamp>2026-08-28T09:30:00</timestamp>
+  <vindex>
+    <pidx vendor="ArteryTek" url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/"/>
+  </vindex>
+</index>
