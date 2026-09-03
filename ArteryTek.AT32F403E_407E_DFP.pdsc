@@ -5,6 +5,9 @@
   <name>AT32F403E_407E_DFP</name>
   <description>ArteryTek AT32F403E_407E Series Device Support,Drivers</description>
   <releases>
+    <release version="2.0.2" date="2026-09-02" url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/ArteryTek.AT32F403E_407E_DFP.2.0.2.pack">
+      remove AT32F403ExC and AT32F407ExC chip models.
+    </release>
     <release version="2.0.1" date="2026-08-28" url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/ArteryTek.AT32F403E_407E_DFP.2.0.1.pack">
       change URL.
     </release>
@@ -71,24 +74,6 @@ On-chip resources
       <feature type="Temp"          n="-40"     m="105"/>
       <feature type="VCC"           n="2.60"    m="3.60"/>
 
-        <!-- *************************  Device 'AT32F403ECCT7'  ***************************** -->
-        <device Dname="AT32F403ECCT7">
-          <compile header="Device/Include/at32f403e_407e.h"  define="AT32F403ECCT7"/>
-          <memory id="IROM1"  access="rx"       start="0x08000000"       size="0x40000"     startup="1"      default="1"/>
-          <memory id="IRAM1"  access="rwx"      start="0x20000000"       size="0x18000"     init   ="0"      default="1"/>
-          <algorithm name="Flash/AT32F403E_256.FLM"                      start="0x08000000" size="0x40000"   default="1"/>
-          <algorithm name="Flash/AT32F403E_USD.FLM"                      start="0x1FFFF800" size="0x00040"   default="0"/>
-        </device>
-
-        <!-- *************************  Device 'AT32F403ECCU7'  ***************************** -->
-        <device Dname="AT32F403ECCU7">
-          <compile header="Device/Include/at32f403e_407e.h"  define="AT32F403ECCU7"/>
-          <memory id="IROM1"  access="rx"       start="0x08000000"       size="0x40000"     startup="1"      default="1"/>
-          <memory id="IRAM1"  access="rwx"      start="0x20000000"       size="0x18000"     init   ="0"      default="1"/>
-          <algorithm name="Flash/AT32F403E_256.FLM"                      start="0x08000000" size="0x40000"   default="1"/>
-          <algorithm name="Flash/AT32F403E_USD.FLM"                      start="0x1FFFF800" size="0x00040"   default="0"/>
-        </device>
-
         <!-- *************************  Device 'AT32F403ECDT7'  ***************************** -->
         <device Dname="AT32F403ECDT7">
           <compile header="Device/Include/at32f403e_407e.h"  define="AT32F403ECDT7"/>
@@ -125,15 +110,6 @@ On-chip resources
           <algorithm name="Flash/AT32F403E_USD.FLM"                      start="0x1FFFF800" size="0x00040"   default="0"/>
         </device>
 
-        <!-- *************************  Device 'AT32F403ERCT7'  ***************************** -->
-        <device Dname="AT32F403ERCT7">
-          <compile header="Device/Include/at32f403e_407e.h"  define="AT32F403ERCT7"/>
-          <memory id="IROM1"  access="rx"       start="0x08000000"       size="0x40000"     startup="1"      default="1"/>
-          <memory id="IRAM1"  access="rwx"      start="0x20000000"       size="0x18000"     init   ="0"      default="1"/>
-          <algorithm name="Flash/AT32F403E_256.FLM"                      start="0x08000000" size="0x40000"   default="1"/>
-          <algorithm name="Flash/AT32F403E_USD.FLM"                      start="0x1FFFF800" size="0x00040"   default="0"/>
-        </device>
-
         <!-- *************************  Device 'AT32F403ERDT7'  ***************************** -->
         <device Dname="AT32F403ERDT7">
           <compile header="Device/Include/at32f403e_407e.h"  define="AT32F403ERDT7"/>
@@ -149,15 +125,6 @@ On-chip resources
           <memory id="IROM1"  access="rx"       start="0x08000000"       size="0xF0000"     startup="1"      default="1"/>
           <memory id="IRAM1"  access="rwx"      start="0x20000000"       size="0x18000"     init   ="0"      default="1"/>
           <algorithm name="Flash/AT32F403E_960.FLM "                     start="0x08000000" size="0xF0000"   default="1"/>
-          <algorithm name="Flash/AT32F403E_USD.FLM"                      start="0x1FFFF800" size="0x00040"   default="0"/>
-        </device>
-
-        <!-- *************************  Device 'AT32F403EVCT7'  ***************************** -->
-        <device Dname="AT32F403EVCT7">
-          <compile header="Device/Include/at32f403e_407e.h"  define="AT32F403EVCT7"/>
-          <memory id="IROM1"  access="rx"       start="0x08000000"       size="0x40000"     startup="1"      default="1"/>
-          <memory id="IRAM1"  access="rwx"      start="0x20000000"       size="0x18000"     init   ="0"      default="1"/>
-          <algorithm name="Flash/AT32F403E_256.FLM"                      start="0x08000000" size="0x40000"   default="1"/>
           <algorithm name="Flash/AT32F403E_USD.FLM"                      start="0x1FFFF800" size="0x00040"   default="0"/>
         </device>
 
@@ -223,15 +190,6 @@ On-chip resources
       <feature type="Temp"          n="-40"     m="105"/>
       <feature type="VCC"           n="2.60"    m="3.60"/>
 
-        <!-- *************************  Device 'AT32F407ERCT7'  ***************************** -->
-        <device Dname="AT32F407ERCT7">
-          <compile header="Device/Include/at32f403e_407e.h"  define="AT32F407ERCT7"/>
-          <memory id="IROM1"  access="rx"       start="0x08000000"         size="0x40000"     startup="1"      default="1"/>
-          <memory id="IRAM1"  access="rwx"      start="0x20000000"         size="0x18000"     init   ="0"      default="1"/>
-          <algorithm name="Flash/AT32F407E_256.FLM"                         start="0x08000000" size="0x40000"   default="1"/>
-          <algorithm name="Flash/AT32F407E_USD.FLM"                         start="0x1FFFF800" size="0x00040"   default="0"/>
-        </device>
-
         <!-- *************************  Device 'AT32F407ERDT7'  ***************************** -->
         <device Dname="AT32F407ERDT7">
           <compile header="Device/Include/at32f403e_407e.h"  define="AT32F407ERDT7"/>
@@ -247,15 +205,6 @@ On-chip resources
           <memory id="IROM1"  access="rx"       start="0x08000000"         size="0xF0000"     startup="1"      default="1"/>
           <memory id="IRAM1"  access="rwx"      start="0x20000000"         size="0x18000"     init   ="0"      default="1"/>
           <algorithm name="Flash/AT32F407E_960.FLM "                        start="0x08000000" size="0xF0000"   default="1"/>
-          <algorithm name="Flash/AT32F407E_USD.FLM"                         start="0x1FFFF800" size="0x00040"   default="0"/>
-        </device>
-
-        <!-- *************************  Device 'AT32F407EVCT7'  ***************************** -->
-        <device Dname="AT32F407EVCT7">
-          <compile header="Device/Include/at32f403e_407e.h"  define="AT32F407EVCT7"/>
-          <memory id="IROM1"  access="rx"       start="0x08000000"         size="0x40000"     startup="1"      default="1"/>
-          <memory id="IRAM1"  access="rwx"      start="0x20000000"         size="0x18000"     init   ="0"      default="1"/>
-          <algorithm name="Flash/AT32F407E_256.FLM"                         start="0x08000000" size="0x40000"   default="1"/>
           <algorithm name="Flash/AT32F407E_USD.FLM"                         start="0x1FFFF800" size="0x00040"   default="0"/>
         </device>
 
