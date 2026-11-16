@@ -5,6 +5,9 @@
   <name>AT32A423_DFP</name>
   <description>ArteryTek AT32A4 Series Device Support,Drivers</description>
   <releases>
+    <release version="2.0.7" date="2026-11-16" url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/ArteryTek.AT32A423_DFP.2.0.7.pack">
+      Update firmware library.
+    </release>
     <release version="2.0.6" date="2026-08-28" url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/ArteryTek.AT32A423_DFP.2.0.6.pack">
       change URL.
     </release>

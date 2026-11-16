@@ -4,26 +4,26 @@
   <url>https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/</url>
   <timestamp>2026-08-28T09:30:10.7300074+00:00</timestamp>
   <pindex>
-    <pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32A403A_DFP" version="2.1.0"/>
-    <pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32A423_DFP" version="2.0.6"/>
-    <pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F011_DFP" version="2.0.2"/>
-    <pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F45x_DFP" version="2.0.2"/>
-    <pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F402_405_DFP" version="2.1.6"/>
-    <pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F403_DFP" version="2.1.5"/>
-    <pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F403A_407_DFP" version="2.2.4"/>
-	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F403E_407E_DFP" version="2.0.1"/>
-	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F406_408_DFP" version="2.0.2"/>
-	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F413_DFP" version="2.1.9"/>
-	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F415_DFP" version="2.1.9"/>
-	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F421_DFP" version="2.2.0"/>
-	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F422_426_DFP" version="2.0.2"/>
-	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F423_DFP" version="2.1.4"/>
-	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F425_DFP" version="2.1.6"/>
-	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F435_437_DFP" version="2.2.8"/>
-	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F490_DFP" version="2.0.6"/>
-	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F6221_DFP" version="2.0.1"/>
-	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32L021_DFP" version="2.0.8"/>
-	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32M412_416_DFP" version="2.0.6"/>
-	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32WB415_DFP" version="2.1.4"/>
+    <pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32A403A_DFP" version="2.1.1"/>
+    <pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32A423_DFP" version="2.0.7"/>
+    <pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F011_DFP" version="2.0.3"/>
+    <pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F45x_DFP" version="2.0.3"/>
+    <pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F402_405_DFP" version="2.1.7"/>
+    <pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F403_DFP" version="2.1.6"/>
+    <pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F403A_407_DFP" version="2.2.5"/>
+	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F403E_407E_DFP" version="2.0.2"/>
+	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F406_408_DFP" version="2.0.3"/>
+	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F413_DFP" version="2.2.0"/>
+	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F415_DFP" version="2.2.0"/>
+	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F421_DFP" version="2.2.1"/>
+	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F422_426_DFP" version="2.0.3"/>
+	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F423_DFP" version="2.1.5"/>
+	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F425_DFP" version="2.1.7"/>
+	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F435_437_DFP" version="2.2.9"/>
+	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F490_DFP" version="2.0.7"/>
+	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32F6221_DFP" version="2.0.2"/>
+	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32L021_DFP" version="2.0.9"/>
+	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32M412_416_DFP" version="2.0.7"/>
+	<pdsc url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/" vendor="ArteryTek" name="AT32WB415_DFP" version="2.1.5"/>
   </pindex>
 </index>

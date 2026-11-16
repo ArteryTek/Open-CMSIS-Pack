@@ -5,6 +5,9 @@
   <name>AT32F011_DFP</name>
   <description>ArteryTek AT32F0 Series Device Support,Drivers</description>
   <releases>
+    <release version="2.0.3" date="2026-11-16" url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/ArteryTek.AT32F011_DFP.2.0.3.pack">
+      Update firmware library.
+    </release>
     <release version="2.0.2" date="2026-08-28" url="https://github.com/ArteryTek/Open-CMSIS-Pack/raw/main/ArteryTek.AT32F011_DFP.2.0.2.pack">
       change URL.
     </release>
